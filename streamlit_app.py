@@ -28,7 +28,7 @@ fruit_choice = streamlit.text_input("What fruit would you like information about
                                   
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 # Normalize
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # Display data cleanly
